@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>catgirl ysws</title>
+
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta property="og:title" content="catgirl ysws" />
+    <meta
+      property="og:description"
+      content="you ship project, we ship cat girl"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/logo.svg" />
+    <meta property="og:image:width" content="630" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="catgirl ysws" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="catgirl ysws" />
+    <meta
+      name="twitter:description"
+      content="you ship project, we ship cat girl"
+    />
+    <meta name="twitter:image" content="/logo.svg" />
+
+    <style>
+      body {
+        background-image: url("bgpattern.gif");
+        background-repeat: repeat;
+        background-size: auto;
+        background-color: #fbc6d7;
+
+        font-family: "Magica";
+        color: #ad2358;
+        font-size: x-large;
+      }
+      .container {
+        width: 800px;
+        margin: auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+      }
+
+      @font-face {
+        font-family: "Magica";
+        src: url(theheart.ttf);
+        font-display: swap;
+      }
+
+      .content {
+        margin-top: 10px;
+        background-color: #fff;
+        border-radius: 20px;
+        padding: 20px;
+        border: 2px solid #ef78a6;
+        box-shadow: -5px 5px 0 #ef78a6;
+      }
+      .catears {
+        width: 700px;
+        display: block;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      a {
+        all: unset;
+        cursor: pointer;
+        text-decoration: underline;
+        font-weight: bold;
+      }
+
+      button {
+        font-family: "Magica";
+        color: #ef78a6;
+        background-color: #fff;
+        border: 2px solid #ef78a6;
+        border-radius: 12px;
+        padding: 10px 20px;
+        font-size: x-large;
+        cursor: pointer;
+        box-shadow: 0 4px 0 #ef78a6;
+        transform: translateY(0);
+        transition:
+          transform 0.08s ease,
+          box-shadow 0.08s ease,
+          background-color 0.15s ease;
+        margin: auto;
+        display: block;
+      }
+
+      button:hover {
+        background-color: #ffd6e8;
+      }
+
+      button:active {
+        transform: translateY(4px) scale(0.97);
+        box-shadow: 0 0px 0 #ef78a6;
+        background-color: #ffc2dd;
+      }
+
+      .topcat {
+        height: 50px;
+        float: right;
+        margin-right: 50px;
+        cursor: pointer;
+      }
+
+      .nickcontainer {
+        display: flex;
+      }
+      .nick {
+        width: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="./oneko.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.core.min.js"></script>
+    <script>
+      let sound = new Howl({
+        src: ["sad-meow-song.mp3"],
+      });
+
+      let meow = new Howl({
+        src: ["meow.mp3"],
+      });
+    </script>
+
+    <div class="container">
+      <img src="/logo.svg" />
+      <img src="/cat.png" class="topcat" id="topcat" />
+      <script>
+        document.getElementById("topcat").addEventListener("mousedown", () => {
+          document.getElementById("topcat").src = "/cathand.png";
+          sound.play();
+        });
+
+        document.getElementById("topcat").addEventListener("mouseup", () => {
+          document.getElementById("topcat").src = "/cat.png";
+        });
+      </script>
+      <div class="content">
+        mrrrp mrrp :3 welcome to my catgirl you ship we ship ₍^. .^₎⟆
+        <br />
+        made with :3c by fox ellison-taylor from hackclub
+        <br />
+        <br />
+        <div class="nickcontainer">
+          <span>
+            you ship a project and we ship you a cat girl (the cat girl is you!)
+            <br />
+            <br />
+            spend 2 hours on ANY project tracked with
+            <a href="https://hackatime.hackclub.com/">hackatime</a> and i'll
+            ship you a pair of cat ears :3
+          </span>
+          <img src="/nickbunnyguy.png" class="nick" />
+        </div>
+        <br />
+        <br />
+        or spend 6 hours on any project and get reeeeeally nice cat ears ≽(◉˕ ◉ ≼マ
+        <img src="/catears.png" class="catears" />
+        <br />
+        <br />
+
+        or spend 12 hours on any project and get a custom hand sewn, artisian
+        skirt, made by the lovely violet ⚞^. .^⚟
+        <img src="/waow.gif" class="catears" />
+
+        <button id="submit">submit (ㅅ´ ˘ `)</button>
+        <script>
+          document
+            .getElementById("submit")
+            .addEventListener("click", () => {
+              window.open("https://submit.hackclub.com/catgirl-mrrp-ysws");
+
+              meow.play();
+            });
+        </script>
+
+        <br />
+        <br />
+        <br />
+        (c) 2000 and meow
+        <br />
+        this is approved by the furry arcade
+      </div>
+    </div>
+  </body>
+</html>
