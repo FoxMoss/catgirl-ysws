@@ -12,7 +12,7 @@
       content="you ship project, we ship cat girl"
     />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="/logo.svg" />
+    <meta property="og:image" content="/biglogo.png" />
     <meta property="og:image:width" content="630" />
     <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="catgirl ysws" />
@@ -23,7 +23,7 @@
       name="twitter:description"
       content="you ship project, we ship cat girl"
     />
-    <meta name="twitter:image" content="/logo.svg" />
+    <meta name="twitter:image" content="/biglogo.png" />
 
     <style>
       body {
@@ -113,6 +113,15 @@
       .nick {
         width: 150px;
       }
+
+      @media screen and (max-width: 900px) {
+        .container {
+          width: 100%;
+        }
+        .catears {
+          width: 80vw;
+        }
+      }
     </style>
   </head>
   <body>
@@ -126,18 +135,23 @@
       let meow = new Howl({
         src: ["meow.mp3"],
       });
+
     </script>
 
     <div class="container">
       <img src="/logo.svg" />
       <img src="/cat.png" class="topcat" id="topcat" />
+      <img src="/cathand.png" class="topcat" id="topcathand" hidden/>
       <script>
         document.getElementById("topcat").addEventListener("mousedown", () => {
-          document.getElementById("topcat").src = "/cathand.png";
+          document.getElementById("topcat").style.display = "none";
+          document.getElementById("topcathand").style.display = "inline";
           sound.play();
         });
 
-        document.getElementById("topcat").addEventListener("mouseup", () => {
+        document.getElementById("topcathand").addEventListener("mouseup", () => {
+          document.getElementById("topcathand").style.display = "none";
+          document.getElementById("topcat").style.display = "inline";
           document.getElementById("topcat").src = "/cat.png";
         });
       </script>
@@ -156,28 +170,27 @@
             <a href="https://hackatime.hackclub.com/">hackatime</a> and i'll
             ship you a pair of cat ears :3
           </span>
-          <img src="/nickbunnyguy.png" class="nick" />
+          <img src="/pnickbunnyguy.jpeg" class="nick" />
         </div>
         <br />
         <br />
-        or spend 6 hours on any project and get reeeeeally nice cat ears ≽(◉˕ ◉ ≼マ
-        <img src="/catears.png" class="catears" />
+        or spend 6 hours on any project and get reeeeeally nice cat ears ≽(◉˕ ◉
+        ≼マ
+        <img src="/pcatears.jpeg" class="catears" />
         <br />
         <br />
 
-        or spend 12 hours on any project and get a custom hand sewn, artisian
+        or spend 12 hours on any project and get a custom hand sewn, artesian
         skirt, made by the lovely violet ⚞^. .^⚟
-        <img src="/waow.gif" class="catears" />
+        <img src="/pwaow.jpeg" class="catears" />
 
         <button id="submit">submit (ㅅ´ ˘ `)</button>
         <script>
-          document
-            .getElementById("submit")
-            .addEventListener("click", () => {
-              window.open("https://submit.hackclub.com/catgirl-mrrp-ysws");
+          document.getElementById("submit").addEventListener("click", () => {
+            window.open("https://submit.hackclub.com/catgirl-mrrp-ysws");
 
-              meow.play();
-            });
+            meow.play();
+          });
         </script>
 
         <br />
