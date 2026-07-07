@@ -102,7 +102,6 @@
 
       .topcat {
         height: 50px;
-        float: right;
         margin-right: 50px;
         cursor: pointer;
       }
@@ -112,6 +111,10 @@
       }
       .nick {
         width: 150px;
+        width: 150px;
+        aspect-ratio: 1;
+        display: block;
+        object-fit: cover;
       }
 
       @media screen and (max-width: 900px) {
@@ -122,6 +125,28 @@
           width: 80vw;
         }
       }
+
+      .arrow {
+        display: block;
+        text-align: center;
+        min-width: 150px;
+      }
+
+      .arrowfiller {
+        width: 100%;
+      }
+
+      .topbar {
+        display: flex;
+        align-items: center;
+      }
+
+      @media screen and (max-width: 500px) {
+        .arrow {
+          display: none;
+        }
+      }
+
     </style>
   </head>
   <body>
@@ -135,13 +160,16 @@
       let meow = new Howl({
         src: ["meow.mp3"],
       });
-
     </script>
 
     <div class="container">
-      <img src="/logo.svg" />
-      <img src="/cat.png" class="topcat" id="topcat" />
-      <img src="/cathand.png" class="topcat" id="topcathand" hidden/>
+      <div class="topbar">
+        <img src="/logo.svg" />
+        <div class="arrowfiller"></div>
+        <span class="arrow">click me :3 --></span>
+        <img src="/cat.png" class="topcat" id="topcat" />
+        <img src="/cathand.png" class="topcat" id="topcathand" hidden />
+      </div>
       <script>
         document.getElementById("topcat").addEventListener("mousedown", () => {
           document.getElementById("topcat").style.display = "none";
@@ -149,11 +177,27 @@
           sound.play();
         });
 
-        document.getElementById("topcathand").addEventListener("mouseup", () => {
-          document.getElementById("topcathand").style.display = "none";
-          document.getElementById("topcat").style.display = "inline";
-          document.getElementById("topcat").src = "/cat.png";
+        document
+          .getElementById("topcathand")
+          .addEventListener("mouseup", () => {
+            document.getElementById("topcathand").style.display = "none";
+            document.getElementById("topcat").style.display = "inline";
+            document.getElementById("topcat").src = "/cat.png";
+          });
+
+        document.getElementById("topcat").addEventListener("touchstart", () => {
+          document.getElementById("topcat").style.display = "none";
+          document.getElementById("topcathand").style.display = "inline";
+          sound.play();
         });
+
+        document
+          .getElementById("topcathand")
+          .addEventListener("touchend", () => {
+            document.getElementById("topcathand").style.display = "none";
+            document.getElementById("topcat").style.display = "inline";
+            document.getElementById("topcat").src = "/cat.png";
+          });
       </script>
       <div class="content">
         mrrrp mrrp :3 welcome to my catgirl you ship we ship ₍^. .^₎⟆
