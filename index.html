@@ -86,8 +86,6 @@
           transform 0.08s ease,
           box-shadow 0.08s ease,
           background-color 0.15s ease;
-        margin: auto;
-        display: block;
       }
 
       button:hover {
@@ -153,6 +151,12 @@
         background-size: contain;
         padding: 10px;
         color: black;
+      }
+
+      .button-container {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
       }
     </style>
   </head>
@@ -245,8 +249,16 @@
         skirt, made by the lovely violet ⚞^. .^⚟
         <img src="/pwaow.jpeg" class="catears" />
 
-        <button id="submit2">submit (ㅅ´ ˘ `)</button>
+        <div class="button-container">
+          <button id="submit1">join #catgirl-ysws</button>
+          <button id="submit2">submit (ㅅ´ ˘ `)</button>
+        </div>
         <script>
+          document.getElementById("submit1").addEventListener("click", () => {
+            window.open("https://hackclub.enterprise.slack.com/archives/C0BFJLTF5HA");
+
+            meow.play();
+          });
           document.getElementById("submit2").addEventListener("click", () => {
             window.open("https://submit.hackclub.com/catgirl-mrrp-ysws");
 
